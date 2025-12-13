@@ -4,109 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forró – Artistas Clássicos</title>
+    <link rel="stylesheet"  href="style.css">
 </head>
-<style>
-     
-     /* area de pesquisa */
-        body {
-            background-color: #f7e7c1; 
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            color: #4a2c0a; 
-        }
 
-        h1 {
-            text-align: center;
-            color: #b3261e; 
-            margin-bottom: 20px;
-        }
-
-        label .busca  {
-            font-weight: bold;
-            color: #7a3d13;
-            margin-left: 5px; 
-        }
-
-        select {
-            padding: 8px;
-            background-color: #ffe8b8; 
-            border: 2px solid #c2681f;
-            border-radius: 5px;
-            color: #4a2c0a;
-            font-weight: bold;
-        }
-
-       .tipo{
-        font-weight: bold;
-        color: #7a3d13; 
-        margin-top: 5px;
-        padding: 15px;
-        border: 2px solid #c2681f;
-        margin-bottom: 25px;
-        border-radius: 4cm;
-       
-       }
-
-       /* area de informações */
-
-        #info {
-            margin-top: 25px;
-            padding: 15px;
-            border: 2px solid #c2681f; 
-            background-color: #fff4db; 
-            border-radius: 8px;
-            display: none;
-        }
-
-        .titulo-artista {
-            font-size: 22px;
-            font-weight: bold;
-            color: #b3261e;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-
-        #introducao-forro {
-           background-color: #fff4db;
-           border: 2px solid #c2681f;
-           padding: 15px;
-           margin-bottom: 25px;
-           border-radius: 8px;
-       }
-
-       /* titulos */
-
-         #introducao-forro h2 {
-           color: #b3261e;
-           margin-top: 0;
-           text-align: center;
-        }
-        #tituloA {
-            color: #b3261e;
-           margin-top: 0;
-           text-align: center;
-        }
-        #tituloB {
-            color: #4a2c0a ;
-            margin-top: 0;
-            text-align: center;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-    </style>
 <body>
-
+  
     <h1 id="tituloA"> Forró raiz - Cantores e bandas classicos </h1>
     <h3 id="tituloB"> contexto cultural </h3>
+    
+    <div class="container">
+
+        <div class="secao-flex">
 
     <div id="introducao-forro">
     <h2>O que é o Forró?</h2>
@@ -117,15 +25,18 @@
         religiosidade e a vida no sertão. Além de estilo musical, o forró também é 
         uma dança tradicional que reúne pessoas em celebrações por todo o Brasil.
     </p>
-    </div>
+</div>
 
+
+   <div class="secao-flex">
     <h1>Artistas do Forró</h1>
-
+</div>
+   
     <form>
         
         <div class="buscar">
         <label for="artista">Escolha um artista:</label><br>
-        <select id="artista" name="artista">
+        <select id="artista1" name="artista">
             <option value="">-- Escolha --</option>
             <option value="luiz">Luiz Gonzaga</option>
             <option value="dominguinhos">Dominguinhos</option>
@@ -133,10 +44,46 @@
             <option value="calcinha">Calcinha Preta</option>
         </select>
         </div>
-      
-        <br>
 
-        <div class="tipo">
+        <br><br>
+        
+
+          <div class="buscar">
+        <label for="instrumento">Instrumento principal:</label><br>
+        <select id="instrumento" name="instrumento">
+            <option value="">-- Escolha --</option>
+            <option value="instrumento1">Sanfona</option>
+            <option value="instrumento2">Zabumba</option>
+            <option value="instrumento3">Triangulo</option>
+            <option value="instrumento4">Sanfona, zabumba, triangulo</option>
+        </select>
+        </div>
+       
+        <br><br>
+        
+          <label for="estilo">Estilo de forró:</label><br>
+    <select id="estilo" name="estilo">
+        <option value="">-- Escolha --</option>
+        <option value="raiz">Forró raiz</option>
+        <option value="eletronico">Forró eletrônico</option>
+        <option value="romantico">Forró romântico</option>
+    </select>
+
+    <br><br>
+
+    
+    <label for="decada">Década de maior destaque:</label><br>
+    <select id="decada" name="decada">
+        <option value="">-- Escolha --</option>
+        <option value="1940">1940 – 1950</option>
+        <option value="1960">1960 – 1970</option>
+        <option value="1990">1990 – 2000</option>
+        <option value="2000">2000 – 2010</option>
+    </select>
+
+    <br><br>
+
+        <div id="tipo">
         <label for="tipo">Dividir por:</label>
         <input id="box" type="checkbox"> Bandas 
         <input id="box" type="checkbox"> Artistas solo 
@@ -146,7 +93,14 @@
         <button type="submit">Cotinuar</button>
 
         <br><br>
+        
+     </div>
+     
+</div>
+    </form>
 
+
+     <div class="container-info">
         <div id="info-luiz">
             <h2>Luiz Gonzaga</h2>
             <ul>
@@ -157,6 +111,7 @@
                 <li><strong>Importância para o forró:</strong> Rei do Baião e principal responsável por difundir o forró no Brasil.</li>
             </ul>
         </div>
+
 
 
         <div id="info-dominguinhos">
@@ -193,7 +148,7 @@
                 <li><strong>Importância para o forró:</strong> Uma das maiores bandas de forró romântico, referência nacional.</li>
             </ul>
         </div>
-
-    </form>
+    </div>
+   
 </body>
 </html>
