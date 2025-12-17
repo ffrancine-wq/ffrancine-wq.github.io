@@ -11,6 +11,7 @@
            background-color: #d4c39b; 
            background-blend-mode: lighten;
            align-items: center;
+           
 
             background-image: url("img/5d29c2a4-d690-48f0-82b4-62abb0ff798a.jpg");
             background-size: cover;
@@ -18,13 +19,23 @@
 
         }
               
-        .form{
+        .formulario{
             display: flex;
             gap: 30px;
             flex-direction: column;
             margin-top: 10px;
+              text-align: center;
+            margin-top: 10px;
+            margin: 10px;
+            font-family: 'Times New Roman', Times, serif;
          
         }
+
+        .sla{
+          width: 40vw;
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+        }
+
            .form h1{
             text-align: center;
             margin-top: 10px;
@@ -53,6 +64,7 @@
             background-color: #fff4db;
             border: 2px solid #c2681f;
             border-radius: 10px;
+            width: 40vw;
         }
 
        
@@ -159,5 +171,6 @@
             font-family: 'Times New Roman', Times, serif;
             margin-bottom: 10px;
         }
+
 
         
