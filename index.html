@@ -6,8 +6,6 @@
     <title>Forró – Artistas Clássicos</title>
 </head>
 <style>
-     
-     /* area de pesquisa */
         body {
             background-color: #f7e7c1; 
             font-family: Arial, sans-serif;
@@ -22,10 +20,9 @@
             margin-bottom: 20px;
         }
 
-        label .busca  {
+        label {
             font-weight: bold;
-            color: #7a3d13;
-            margin-left: 5px; 
+            color: #7a3d13; 
         }
 
         select {
@@ -36,19 +33,6 @@
             color: #4a2c0a;
             font-weight: bold;
         }
-
-       .tipo{
-        font-weight: bold;
-        color: #7a3d13; 
-        margin-top: 5px;
-        padding: 15px;
-        border: 2px solid #c2681f;
-        margin-bottom: 25px;
-        border-radius: 4cm;
-       
-       }
-
-       /* area de informações */
 
         #info {
             margin-top: 25px;
@@ -83,30 +67,13 @@
            border-radius: 8px;
        }
 
-       /* titulos */
-
          #introducao-forro h2 {
            color: #b3261e;
            margin-top: 0;
-           text-align: center;
+           text-align: centers;
         }
-        #tituloA {
-            color: #b3261e;
-           margin-top: 0;
-           text-align: center;
-        }
-        #tituloB {
-            color: #4a2c0a ;
-            margin-top: 0;
-            text-align: center;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
     </style>
 <body>
-
-    <h1 id="tituloA"> Forró raiz - Cantores e bandas classicos </h1>
-    <h3 id="tituloB"> contexto cultural </h3>
 
     <div id="introducao-forro">
     <h2>O que é o Forró?</h2>
@@ -122,8 +89,7 @@
     <h1>Artistas do Forró</h1>
 
     <form>
-        
-        <div class="buscar">
+
         <label for="artista">Escolha um artista:</label><br>
         <select id="artista" name="artista">
             <option value="">-- Escolha --</option>
@@ -132,18 +98,9 @@
             <option value="mastruz">Mastruz com Leite</option>
             <option value="calcinha">Calcinha Preta</option>
         </select>
-        </div>
-      
-        <br>
-
-        <div class="tipo">
-        <label for="tipo">Dividir por:</label>
-        <input id="box" type="checkbox"> Bandas 
-        <input id="box" type="checkbox"> Artistas solo 
-        </div>
 
         <br><br>
-        <button type="submit">Cotinuar</button>
+        <button type="submit">Confirmar</button>
 
         <br><br>
 
@@ -182,7 +139,7 @@
             </ul>
         </div>
 
-
+>
         <div id="info-calcinha">
             <h2>Calcinha Preta</h2>
             <ul>
