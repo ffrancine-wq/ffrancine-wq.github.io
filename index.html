@@ -1,90 +1,20 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Forró – Artistas Clássicos</title>
+    <link rel="stylesheet"  href="style.css">
 </head>
-<style>
-        body {
-            background-color: #f7e7c1; 
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            color: #4a2c0a; 
-        }
 
-        h1 {
-            text-align: center;
-            color: #b3261e; 
-            margin-bottom: 20px;
-        }
-
-        label {
-            font-weight: bold;
-            color: #7a3d13; 
-        }
-
-        select {
-            padding: 8px;
-            background-color: #ffe8b8; 
-            border: 2px solid #c2681f;
-            border-radius: 5px;
-            color: #4a2c0a;
-            font-weight: bold;
-        }
-
-        #info {
-            margin-top: 25px;
-            padding: 15px;
-            border: 2px solid #c2681f; 
-            background-color: #fff4db; 
-            border-radius: 8px;
-            display: none;
-        }
-
-        .titulo-artista {
-            font-size: 22px;
-            font-weight: bold;
-            color: #b3261e;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            margin: 0;
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 5px;
-        }
-
-        #introducao-forro {
-           background-color: #fff4db;
-           border: 2px solid #c2681f;
-           padding: 15px;
-           margin-bottom: 25px;
-           border-radius: 8px;
-       }
-
-         #introducao-forro h2 {
-           color: #b3261e;
-           margin-top: 0;
-           text-align: centers;
-        }
-    </style>
 <body>
-<<<<<<< HEAD
   
-    <h1 id="tituloA"> Forró raiz - Cantores e bandas </h1>
+    <h1 id="tituloA"> Forró raiz - Cantores e bandas classicos </h1>
     <h3 id="tituloB"> contexto cultural </h3>
     
     <div class="container">
 
         <div class="secao-flex">
-=======
->>>>>>> 5d0376a062fc83086c142ce651b033ed8c8f3ec8
 
     <div id="introducao-forro">
     <h2>O que é o Forró?</h2>
@@ -95,11 +25,9 @@
         religiosidade e a vida no sertão. Além de estilo musical, o forró também é 
         uma dança tradicional que reúne pessoas em celebrações por todo o Brasil.
     </p>
-    </div>
+</div>
 
-    <h1>Artistas do Forró</h1>
 
-<<<<<<< HEAD
    <div class="form">
     <h1 class="titulo-form">Vamos escolher  o melhor artista para você!</h1>
 </div>
@@ -113,81 +41,63 @@
              <option value="disco">Discos de Vinil</option>
              <option value="cd">CDs</option>
              <option value="digtal">Platarformas digitais</option>
-=======
-    <form>
-
-        <label for="artista">Escolha um artista:</label><br>
-        <select id="artista" name="artista">
-            <option value="">-- Escolha --</option>
-            <option value="luiz">Luiz Gonzaga</option>
-            <option value="dominguinhos">Dominguinhos</option>
-            <option value="mastruz">Mastruz com Leite</option>
-            <option value="calcinha">Calcinha Preta</option>
->>>>>>> 5d0376a062fc83086c142ce651b033ed8c8f3ec8
         </select>
+        </div>
+
+     <br><br>
+        
+
+          <div class="buscar">
+            <label for="instrumento">Instrumento principal:</label><br>
+              <select id="instrumento" name="instrumento">
+                <option value="">-- Escolha --</option>
+                <option value="instrumento1">Sanfona</option>
+                <option value="instrumento2">Zabumba</option>
+                <option value="instrumento3">Triangulo</option>
+                <option value="instrumento4">Sanfona, zabumba, triangulo</option>
+         </select>
+        </div>
+       
+     <br><br>
+        
+        <div class="buscar">
+          <label for="estilo">Estilo de forró:</label><br>
+            <select id="estilo" name="estilo">
+              <option value="">-- Escolha --</option>
+              <option value="raiz">Forró raiz</option>
+              <option value="eletronico">Forró eletrônico</option>
+              <option value="romantico">Forró romântico</option>
+      </select>
+    </div>
+
+    <br><br>
+
+    <div class="buscar">
+       <label for="decada">Década de maior destaque:</label><br>
+           <select id="decada" name="decada">
+             <option value="">-- Escolha --</option>
+             <option value="1940">1940 – 1950</option>
+             <option value="1960">1960 – 1970</option>
+             <option value="1990">1990 – 2000</option>
+            <option value="2000">2000 – 2010</option>
+     </select>
+    </div>
+
+    <br><br>
+
+        <div id="tipo" class="buscar">
+          <label for="tipo">Dividir por:</label>
+            <input name="tipo" type="checkbox" value="bandas"> Bandas   
+            <input name="tipo" type="checkbox" value="solo" > Artistas solo 
+        </div>
 
         <br><br>
-        <button type="submit">Confirmar</button>
+        <button type="submit">Cotinuar</button>
 
-<<<<<<< HEAD
      </div>
      
 </div>
    
    <script src="script.js"></script>
-=======
-        <br><br>
-
-        <div id="info-luiz">
-            <h2>Luiz Gonzaga</h2>
-            <ul>
-                <li><strong>Estilo musical:</strong> Baião, xote, xaxado.</li>
-                <li><strong>Músicas de maior sucesso:</strong> Asa Branca, Baião, Xote das Meninas.</li>
-                <li><strong>Início da carreira:</strong> Década de 1940.</li>
-                <li><strong>Quantidade de músicas publicadas:</strong> Mais de 600 gravações.</li>
-                <li><strong>Importância para o forró:</strong> Rei do Baião e principal responsável por difundir o forró no Brasil.</li>
-            </ul>
-        </div>
-
-
-        <div id="info-dominguinhos">
-            <h2>Dominguinhos</h2>
-            <ul>
-                <li><strong>Estilo musical:</strong> Forró tradicional, xote, baião, com influências de MPB e jazz.</li>
-                <li><strong>Músicas de maior sucesso:</strong> Eu Só Quero um Xodó; Isso Aqui Tá Bom Demais.</li>
-                <li><strong>Início da carreira:</strong> Final dos anos 1950.</li>
-                <li><strong>Quantidade de músicas publicadas:</strong> Cerca de 40 álbuns e centenas de composições.</li>
-                <li><strong>Importância para o forró:</strong> Sucessor de Luiz Gonzaga, modernizando o forró com técnica e sensibilidade.</li>
-            </ul>
-        </div>
-
-
-        <div id="info-mastruz">
-            <h2>Mastruz com Leite</h2>
-            <ul>
-                <li><strong>Estilo musical:</strong> Forró eletrônico.</li>
-                <li><strong>Músicas de maior sucesso:</strong> Meu Vaqueiro, Meu Peão; Saga de um Vaqueiro.</li>
-                <li><strong>Início da carreira:</strong> 1990.</li>
-                <li><strong>Quantidade de músicas publicadas:</strong> Mais de 30 álbuns gravados.</li>
-                <li><strong>Importância para o forró:</strong> Pioneira no forró eletrônico, fundamental para a popularização nos anos 90.</li>
-            </ul>
-        </div>
-
->
-        <div id="info-calcinha">
-            <h2>Calcinha Preta</h2>
-            <ul>
-                <li><strong>Estilo musical:</strong> Forró eletrônico e forró romântico.</li>
-                <li><strong>Músicas de maior sucesso:</strong> Você Não Vale Nada; Louca por Ti; Baby Doll.</li>
-                <li><strong>Início da carreira:</strong> ssss1995.</li>
-                <li><strong>Quantidade de músicas publicadas:</strong> Mais de 20 álbuns.</li>
-                <li><strong>Importância para o forró:</strong> Uma das maiores bandas de forró romântico, referência nacional.</li>
-            </ul>
-        </div>
-
-    </form>
->>>>>>> 5d0376a062fc83086c142ce651b033ed8c8f3ec8
 </body>
 </html>
-=======
->>>>>>> b3d04c81cd378a69b184816625e53d56f2cb42e1
