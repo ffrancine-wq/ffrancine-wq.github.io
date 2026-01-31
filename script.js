@@ -9,12 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
         info.style.display = "none";
         info.innerHTML = "";
 
+        // CAPTURA DOS VALORES
         const gravacoes = document.getElementById("gravacoes").value;
         const instrumento = document.getElementById("instrumento").value;
         const estilo = document.getElementById("estilo").value;
         const decada = document.getElementById("decada").value;
         const tipos = document.querySelectorAll('input[name="tipo"]:checked');
 
+        // VALIDAÇÃO
         let erros = [];
 
         if (!gravacoes) erros.push("Selecione o tipo de gravação.");
@@ -28,39 +30,93 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        // 🔥 REGRAS REAIS DE ARTISTAS
-        let artista = "";
-        let descricao = "";
+        // TIPO SELECIONADO (checkbox)
+        let tipoSelecionado = null;
+        if (tipos.length > 0) {
+            tipoSelecionado = tipos[0].value;
+        }
 
-        if (instrumento === "instrumento1" && decada === "1940" && estilo === "raiz") {
-            artista = "Luiz Gonzaga";
-            descricao = "Conhecido como o Rei do Baião, foi o maior responsável por levar o forró ao Brasil inteiro.";
-        } 
-        else if (instrumento === "instrumento4" && decada === "1960") {
-            artista = "Dominguinhos";
-            descricao = "Discípulo de Luiz Gonzaga, mestre da sanfona e grande compositor do forró tradicional.";
-        } 
-        else if (instrumento === "instrumento2" && estilo === "raiz") {
-            artista = "Jackson do Pandeiro";
-            descricao = "Revolucionou o ritmo nordestino com sua batida única e influência no forró.";
+        // ARRAY DE ARTISTAS
+        const artistas = [
+            {
+                nome: "Luiz Gonzaga",
+                descricao: "Conhecido como o Rei do Baião."
+            },
+            {
+                nome: "Dominguinhos",
+                descricao: "Discípulo de Luiz Gonzaga, mestre da sanfona."
+            },
+            {
+                nome: "Jackson do Pandeiro",
+                descricao: "Revolucionou o ritmo nordestino."
+            },
+            {
+                nome: "Magníficos",
+                descricao: "Banda romântica de grande sucesso nos anos 90."
+            },
+            {
+                nome: "Falamansa",
+                descricao: "Popularizou o forró universitário."
+            },
+            {
+                nome: "Calcinha Preta",
+                descricao: "Grande nome do forró eletrônico dos anos 2000."
+            },
+            {
+                nome: "Mastruz com Leite",
+                descricao: "Uma das bandas mais importantes do forró eletrônico."
+            }
+        ];
+
+        // ESCOLHA DO ARTISTA
+        let artistaSelecionado = null;
+
+        // FORRÓ RAIZ
+        if (estilo === "raiz" && instrumento === "instrumento1" && decada === "1940") {
+            artistaSelecionado = artistas[0];
+        }
+        else if (estilo === "raiz" && instrumento === "instrumento4" && decada === "1960") {
+            artistaSelecionado = artistas[1];
+        }
+        else if (estilo === "raiz" && instrumento === "instrumento2") {
+            artistaSelecionado = artistas[2];
+        }
+
+        // FORRÓ ROMÂNTICO
+        else if (estilo === "romantico" && tipoSelecionado === "bandas" && decada === "1990") {
+            artistaSelecionado = artistas[3];
         }
         else if (estilo === "romantico" && decada === "1990") {
-            artista = "Falamansa";
-            descricao = "Responsável por popularizar o forró universitário e romântico nos anos 90.";
-        }
-        else if (estilo === "eletronico" && tipos[0].value === "bandas") {
-            artista = "Mastruz com Leite";
-            descricao = "Uma das bandas mais importantes do forró eletrônico, com enorme sucesso nacional.";
-        }
-        else {
-            artista = "Trio Nordestino";
-            descricao = "Grupo clássico que preserva a essência do forró tradicional em todas as épocas.";
+            artistaSelecionado = artistas[4];
         }
 
-        mostrarResultado(artista, descricao);
-        form.reset();
+        // FORRÓ ELETRÔNICO
+        else if (estilo === "eletronico" && tipoSelecionado === "bandas" && decada === "2000") {
+            artistaSelecionado = artistas[5];
+        }
+        else if (estilo === "eletronico") {
+            artistaSelecionado = artistas[6];
+        }
+
+        // PADRÃO
+        else {
+            artistaSelecionado = {
+                nome: " Nenhum artista disponivel ",
+                descricao: "Ainda não há um artista cadastrado para essa combinação de escolhas."
+            };
+        }
+
+        // MOSTRAR RESULTADO
+        info.innerHTML = `
+            <h3 class="titulo-artista">${artistaSelecionado.nome}</h3>
+            <p>${artistaSelecionado.descricao}</p>
+        `;
+
+        info.style.display = "block";
+        animar(info);
     });
 
+    // FUNÇÕES AUXILIARES
     function mostrarErros(erros) {
         info.style.display = "block";
         info.innerHTML = "<ul></ul>";
@@ -72,17 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
             li.style.color = "#b3261e";
             ul.appendChild(li);
         });
-
-        animar(info);
-    }
-
-    function mostrarResultado(artista, descricao) {
-        info.style.display = "block";
-        info.innerHTML = `
-            <div class="titulo-artista">🎶 ${artista}</div>
-            <p>${descricao}</p>
-            <p><strong>Recomendação:</strong> Explore músicas clássicas e apresentações históricas.</p>
-        `;
 
         animar(info);
     }
